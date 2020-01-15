@@ -1,0 +1,6 @@
+<swiper autoplay="{{autoplay}}" bindchange="hide" circular="true" class="goods-image-swiper" duration="300" indicatorActiveColor="#ff5c5c" indicatorDots="true" interval="5000">
+    <swiper-item wx:for="{{goods.pic_list}}" wx:key="{{item.id}}">
+        <image bindtap="play" class="play {{img_hide}}" data-url="{{goods.video_url}}" src="{{__wxapp_img.store.video_play.url}}" wx:if="{{goods.video_url}}"></image>
+        <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="{{item}}"></image>
+    </swiper-item>
+</swiper>
